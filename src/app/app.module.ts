@@ -10,6 +10,7 @@ import { PostsComponent } from './posts/posts.component';
 import { PostsService } from './posts.service';
 import { RouterModule }   from '@angular/router';
 import { StartPageComponent } from './start-page/start-page.component';
+import { GetStartedComponent } from './get-started/get-started.component';
 
 const ROUTES = [
   {
@@ -31,7 +32,8 @@ const ROUTES = [
   declarations: [
     AppComponent,
     StartPageComponent,
-    PostsComponent
+    PostsComponent,
+    GetStartedComponent
   ],
   imports: [
     BrowserModule,

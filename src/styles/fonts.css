@@ -1,0 +1,9 @@
+@font-face {
+    font-family: RalewayExtraLight;
+    src: url('/assets/fonts/raleway/Raleway-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: RalewayLight;
+    src: url('/assets/fonts/raleway/Raleway-Light.ttf');
+}
