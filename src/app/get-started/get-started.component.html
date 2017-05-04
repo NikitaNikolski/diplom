@@ -1,3 +1,47 @@
-<p>
-  get-started works!
-</p>
+<div class="get-started-page-header"></div>
+
+<div class="cards">
+  <div class="card python-card">
+    <md-card>
+      <md-card-header>
+        <div md-card-avatar class="python-avatar"></div>
+        <md-card-title>Python</md-card-title>
+        <md-card-subtitle>Python implementation</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="assets/img/python.png">
+      <md-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button (click) = "navigateTo('https://ru.wikipedia.org/wiki/Python')">READ MORE</button>
+        <button md-button (click) = startWithPython()>GO!</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+
+  <div class="card js-card">
+    <md-card>
+      <md-card-header>
+        <div md-card-avatar class="js-avatar"></div>
+        <md-card-title>JS</md-card-title>
+        <md-card-subtitle>JS implementation</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="assets/img/js.png">
+      <md-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button (click) = "navigateTo('https://ru.wikipedia.org/wiki/JavaScript')">READ MORE</button>
+        <button md-button (click) = startWithJS()>GO!</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

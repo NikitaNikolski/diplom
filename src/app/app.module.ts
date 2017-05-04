@@ -1,46 +1,36 @@
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { GetStartedComponent } from './get-started/get-started.component';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { PostsComponent } from './posts/posts.component';
 import { PostsService } from './posts.service';
-import { RouterModule }   from '@angular/router';
 import { StartPageComponent } from './start-page/start-page.component';
-import { GetStartedComponent } from './get-started/get-started.component';
-
-const ROUTES = [
-  {
-    path: '',
-    redirectTo: 'start-page',
-    pathMatch: 'full'
-  },
-  {
-    path: 'start-page',
-    component: StartPageComponent
-  },
-  {
-    path: 'posts',
-    component: PostsComponent
-  }
-];
+import { PythonPageComponent } from './python-page/python-page.component';
+import { JsPageComponent } from './js-page/js-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartPageComponent,
     PostsComponent,
-    GetStartedComponent
+    GetStartedComponent,
+    PythonPageComponent,
+    JsPageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES)
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]

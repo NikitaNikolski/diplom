@@ -11,8 +11,18 @@
     header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
-        padding: 0 10px;
+        padding: 10px 15px;
+
+        a {
+            font-family: RalewayExtraLight;
+            text-transform: uppercase;
+
+            &.logo {
+                font-size: 24px;
+            }
+        }
 
         nav {
             width: 230px;

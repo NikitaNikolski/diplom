@@ -7,3 +7,8 @@
     font-family: RalewayLight;
     src: url('/assets/fonts/raleway/Raleway-Light.ttf');
 }
+
+@font-face {
+    font-family: RalewayRegular;
+    src: url('/assets/fonts/raleway/Raleway-Regular.ttf');
+}
