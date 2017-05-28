@@ -1,0 +1,33 @@
+.contacts-page-container {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.5em;
+
+    .img-container {
+        width: 20%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .contacts-container {
+        display: flex;
+        justify-content: center;
+        
+        ul {
+            list-style-type: none;
+
+            li {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .description-container {
+        text-align: justify;
+        line-height: 1.5em;
+    }
+}

@@ -5,6 +5,9 @@ const router = express.Router();
 const axios = require('axios');
 const API = 'https://jsonplaceholder.typicode.com';
 
+const myPythonScriptPath = '../detect_barcode.py';
+const PythonShell = require('python-shell');
+
 /* GET api listing. */
 router.get('/', (req, res) => { 
   res.send('api works');
@@ -21,6 +24,34 @@ router.get('/posts', (req, res) => {
     .catch(error => {
       res.status(500).send(error)
     });
+});
+
+router.get('/barcode-python', (req, res) => {
+  let options = {
+    scriptPath: '../',
+    args: ['--image=src/assets/img/barcode_02.jpg']
+  };
+
+  console.log("Test");
+
+  let pyshell = new PythonShell(myPythonScriptPath, options);
+
+  pyshell.on('message', function (message) {
+      // received a message sent from the Python script (a simple "print" statement)
+      console.log(message);
+      res.json()
+  });
+
+  // end the input stream and allow the process to exit
+  pyshell.end(function (err) {
+      if (err){
+          throw err;
+      };
+
+      console.log('finished');
+  });
+
+  res.send("Ok");
 });
 
 module.exports = router;
